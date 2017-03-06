@@ -1,0 +1,25 @@
+<a href="/posts">Bright Ideas</a>
+<p><%=@post.user.alias%> says:</p>
+<div id="post">
+	<%= @post.content%>
+</div>
+
+<p>People who liked post:</p>
+<table>
+	<thead>
+		<tr>
+			<th>Alias</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+	<%@likes.each do |l|%>
+		<tr>
+			<td><a href="/users/<%=l.user.id%>"><%=l.user.alias%></a></td>
+			<td><%=l.user.name%></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+
+

@@ -1,0 +1,7 @@
+<a href="/posts">Bright Ideas</a>
+<p>Name: <%= @user.name%></p>
+<p>Alias: <%= @user.alias%></p>
+<p>Email: <%=@user.email%></p>
+<hr>
+<p>Total Number of Posts:<%=@user.posts.count%></p>
+<p>Total Number of likes:<%=@user.likes.sum(:likes)%></p>
